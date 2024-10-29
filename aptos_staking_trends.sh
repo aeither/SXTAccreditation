@@ -1,33 +1,17 @@
-java -jar sxt8.jar authenticate keychain \
---accessToken="eyJ0eXBlIjoiYWNjZXNzIiwia2lkIjoiZTUxNDVkYmQtZGNmYi00ZjI4LTg3NzItZjVmNjNlMzcwM2JlIiwiYWxnIjoiRVMyNTYifQ.eyJpYXQiOjE3MzAxOTk1OTEsIm5iZiI6MTczMDE5OTU5MSwiZXhwIjoxNzMwMjAxMDkxLCJ0eXBlIjoiYWNjZXNzIiwidXNlciI6ImFlaXRoZXIiLCJzZXNzaW9uIjoiZjZmNGNhMWMwMzg2Y2YwYTI0ODgxYWVkIiwic3NuX2V4cCI6MTczMDI4NTU1MjgxMywiaXRlcmF0aW9uIjoiZmE5NzdiYmQxZTM5NGQzYmYwYTdlNzgwIiwidHJpYWwiOnRydWV9.0k9ELfrShnGecJzY86vv7xPsrBmLGvZKV6Q-diCfH96Q5B7k5noZ-fG819eqLsAzyTMEgz5TVARFCC8VPKss8g" \
---url="https://api.spaceandtime.dev" \
-add \
---privateKey="DqrUXhWjQwDSE2vfs1Bskz1Xi09J6QdPR93KBfpuqVk=" \
---publicKey="z4C63FgEKchKI3Xj03JBf6Oom/a24A4ogzOV3LkUbVo="
-
-source .env && curl --request POST \
---url "https://api.spaceandtime.app/v1/sql" \
---header "accept: application/json" \
---header "authorization: Bearer sxt_m7xsRu6FB0_oHREj2ReQhzv716GgAEv6LWp" \
---header "content-type: application/json" \
---data '{
-    "sqlText": "Select count(*) as Blocks_Yesterday from Ethereum.Blocks where time_stamp between current_date-1 and current_date"
-}'
-
-java -jar sxt8.jar authenticate keypair
+# in the dashboard: select * from SXTTemp.aptos_staking_trends_aeither limit 10
 
 # 
 
 API_URL="https://api.spaceandtime.dev"
 USERID="aeither"
-USER_PUBLIC_KEY="yAIBDZXWOgmDVbgNDXcjmYvpbfu5bx1+QRdEwjdKpIc="
-USER_PRIVATE_KEY="Ke1spyTzdCclX8DNLyUb4xLp8CArAGTPFYXPsYEfrvc="
+USER_PUBLIC_KEY="sxtcli authenticate keypair"
+USER_PRIVATE_KEY="sxtcli authenticate keypair"
 
 
   #
 
   java -jar sxt8.jar authenticate keychain \
---accessToken="eyJ0eXBlIjoiYWNjZXNzIiwia2lkIjoiZTUxNDVkYmQtZGNmYi00ZjI4LTg3NzItZjVmNjNlMzcwM2JlIiwiYWxnIjoiRVMyNTYifQ.eyJpYXQiOjE3MzAyMDI3MjIsIm5iZiI6MTczMDIwMjcyMiwiZXhwIjoxNzMwMjA0MjIyLCJ0eXBlIjoiYWNjZXNzIiwidXNlciI6ImFlaXRoZXIiLCJzZXNzaW9uIjoiZjZmNGNhMWMwMzg2Y2YwYTI0ODgxYWVkIiwic3NuX2V4cCI6MTczMDI4NTU1MjgxMywiaXRlcmF0aW9uIjoiMTU3Y2M1OGJjNWEzNmFiZjgxYjI2MTI4IiwidHJpYWwiOnRydWV9.GnkJHhtIAjTI05dYTuR42Ag2uDVLDYnecnjO557tFoT85UA8gFIMtu8Xq2XbopEck35ghWPrm3RFrYLHtjdPpw" \
+--accessToken="get it form the dashboard" \
 --url="https://api.spaceandtime.dev" \
 add \
   --publicKey=$USER_PUBLIC_KEY \
