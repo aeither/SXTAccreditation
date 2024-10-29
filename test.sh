@@ -7,7 +7,7 @@ source ./.env
 SXTCLI_CMD="java -jar sxt8.jar"
 
 CREATE_SQL=$(cat << EOM
-  CREATE TABLE SXTTemp.Galaxy_aeither@gmail.com
+  CREATE TABLE SXTTemp.Galaxy_aeither
   ( MyID              INTEGER
   , MyBigint          BIGINT
   , MyText            VARCHAR
